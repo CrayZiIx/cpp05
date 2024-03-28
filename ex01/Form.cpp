@@ -6,13 +6,13 @@
 /*   By: jolecomt <jolecomt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 18:09:18 by jolecomt          #+#    #+#             */
-/*   Updated: 2024/03/28 18:21:50 by jolecomt         ###   ########.fr       */
+/*   Updated: 2024/03/28 18:24:42 by jolecomt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form(void) : name("Basic Formular")
+Form::Form(void) : name("Basic Formular"), gradeSigne(150), gradeExec(150)
 {
     return ;
 }
