@@ -6,7 +6,7 @@
 /*   By: jolecomt <jolecomt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 15:51:27 by jolecomt          #+#    #+#             */
-/*   Updated: 2024/03/28 18:17:38 by jolecomt         ###   ########.fr       */
+/*   Updated: 2024/03/29 20:13:03 by jolecomt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 #include <iostream>
 #include <exception>
+#include "Form.hpp"
+
+class Form;
 
 class Bureaucrat
 {
@@ -41,6 +44,7 @@ class Bureaucrat
         void incrementGrade(void);
         void decrementGrade(void);
         Bureaucrat &operator=(const Bureaucrat &other);
+        void signForm(Form &_form);
 
 };
 

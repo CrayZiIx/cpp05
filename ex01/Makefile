@@ -6,7 +6,7 @@
 #    By: jolecomt <jolecomt@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/21 11:50:48 by jolecomt          #+#    #+#              #
-#    Updated: 2024/03/28 17:16:08 by jolecomt         ###   ########.fr        #
+#    Updated: 2024/03/29 15:06:13 by jolecomt         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ CXX           = c++
 CXXFLAGS      = -Wall -Wextra -Werror -std=c++98
 
 SRC_FILES     = main\
-				Bureaucrat
+				Bureaucrat\
+				Form
 
 SRC           = $(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC_FILES)))
 OBJ           = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
