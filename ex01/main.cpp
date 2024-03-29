@@ -6,7 +6,7 @@
 /*   By: jolecomt <jolecomt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 15:50:22 by jolecomt          #+#    #+#             */
-/*   Updated: 2024/03/29 20:41:57 by jolecomt         ###   ########.fr       */
+/*   Updated: 2024/03/29 21:02:26 by jolecomt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -159,6 +159,7 @@ int main(void)
 		std::cout<<"Bureaucraft try to signe A"<<std::endl;
 		b.signForm(a);
 		b.signForm(a);
+		std::cout<<a<<std::endl;
 	}
 	catch( std::exception& e)
 	{

@@ -6,7 +6,7 @@
 /*   By: jolecomt <jolecomt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 18:09:18 by jolecomt          #+#    #+#             */
-/*   Updated: 2024/03/29 20:17:34 by jolecomt         ###   ########.fr       */
+/*   Updated: 2024/03/29 21:01:19 by jolecomt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,14 +58,21 @@ bool Form::getSigned() const
     return (this->_isSigned);
 }
 
+int Form::getGradeSigne() const
+{
+    return (this->_gradeSigne);
+}
+int Form::getGradeExec() const
+{
+    return (this->_gradeExec);
+}
+
 void Form::beSigned(Bureaucrat _bureaucrat)
 {
     if (_bureaucrat.getGrade() > this->_gradeSigne)
         throw (Form::GradeTooLowException());
     else
         this->_isSigned = true;
-    std::string s = _bureaucrat.getName(); // delete this
-    std::cout<<"\""<<s<<"\", signed \""<<this->getName()<<"\""<<std::endl; // delete this
 }
 
 const char *Form::GradeTooHighException::what(void) const throw()
@@ -76,4 +83,13 @@ const char *Form::GradeTooHighException::what(void) const throw()
 const char *Form::GradeTooLowException::what(void) const throw()
 {
     return ("Grade too Low");
+}
+
+std::ostream &operator<<(std::ostream &stream, const Form &other)
+{    
+    stream<<other.getName();
+    stream<<other.getSigned();
+    stream<<other.getGradeSigne();
+    stream<<other.getGradeExec();
+    return (stream);
 }

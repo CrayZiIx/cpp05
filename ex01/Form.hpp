@@ -6,7 +6,7 @@
 /*   By: jolecomt <jolecomt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 18:09:16 by jolecomt          #+#    #+#             */
-/*   Updated: 2024/03/29 20:13:10 by jolecomt         ###   ########.fr       */
+/*   Updated: 2024/03/29 21:01:08 by jolecomt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,11 @@ class Form
         ~Form(void);
         Form &operator=(const Form &other);
         const std::string getName() const;
-        void beSigned(Bureaucrat _bureaucrat);
+        int getGradeSigne() const;
+        int getGradeExec() const;
         bool getSigned() const;
+        
+        void beSigned(Bureaucrat _bureaucrat);
 };
+
+std::ostream &operator<<(std::ostream &stream, const Form &other);
