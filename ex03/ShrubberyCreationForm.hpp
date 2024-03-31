@@ -6,7 +6,7 @@
 /*   By: jolecomt <jolecomt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 15:22:12 by jolecomt          #+#    #+#             */
-/*   Updated: 2024/03/31 18:24:35 by jolecomt         ###   ########.fr       */
+/*   Updated: 2024/03/31 16:41:29 by jolecomt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,5 @@ class ShrubberyCreationForm : public AForm
         ~ShrubberyCreationForm();
         ShrubberyCreationForm &operator=(const ShrubberyCreationForm *other);
         void execute(const Bureaucrat &executor) const;
+        
 };
