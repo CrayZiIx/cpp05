@@ -6,7 +6,7 @@
 /*   By: jolecomt <jolecomt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 15:50:22 by jolecomt          #+#    #+#             */
-/*   Updated: 2024/03/31 18:14:50 by jolecomt         ###   ########.fr       */
+/*   Updated: 2024/04/01 13:54:32 by jolecomt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
+#include "Intern.hpp"
 
 int main(void)
 { 
@@ -133,6 +134,34 @@ int main(void)
 
 		b.signForm(ppf);
 		b.executeForm(ppf);
+	}
+	catch(std::exception& e)
+	{
+		std::cerr<<e.what()<<std::endl;
+	}
+	std::cout<<std::endl;
+	try
+	{
+		Intern rdmIntern;
+		AForm *f;
+
+		f = rdmIntern.makeForm("", "testouille");
+		if (f)
+			std::cout<<&f<<std::endl;
+		delete f;
+		f = rdmIntern.makeForm("shrubbery creation", "testouille");
+		if (f)
+			std::cout<<*f<<std::endl;
+		delete f;
+		f = rdmIntern.makeForm("presidential form", "testouille");
+		if (f)
+			std::cout<<*f<<std::endl;
+		delete f;
+		f = rdmIntern.makeForm("robotomy request", "testouille");
+		if (f)
+			std::cout<<*f<<std::endl;
+		delete f;
+		
 	}
 	catch(std::exception& e)
 	{

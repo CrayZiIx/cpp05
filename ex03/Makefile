@@ -6,7 +6,7 @@
 #    By: jolecomt <jolecomt@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/21 11:50:48 by jolecomt          #+#    #+#              #
-#    Updated: 2024/03/31 17:41:05 by jolecomt         ###   ########.fr        #
+#    Updated: 2024/04/01 13:45:22 by jolecomt         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,8 @@ SRC_FILES     = main\
 				AForm\
 				ShrubberyCreationForm\
 				RobotomyRequestForm\
-				PresidentialPardonForm
+				PresidentialPardonForm\
+				Intern
 
 SRC           = $(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC_FILES)))
 OBJ           = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
