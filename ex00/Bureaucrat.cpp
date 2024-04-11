@@ -95,7 +95,7 @@ std::ostream &operator<<(std::ostream &stream, const Bureaucrat &other)
 
 void Bureaucrat::incrementGrade(void)
 {
-    std::cout<<"Bureaucrat : decrementGrade called"<<std::endl;
+    std::cout<<"Bureaucrat : incrementGrade called"<<std::endl;
     if (this->grade - 1 < 1)
         throw (Bureaucrat::GradeTooHighException());
     else
@@ -105,7 +105,7 @@ void Bureaucrat::incrementGrade(void)
 
 void Bureaucrat::decrementGrade(void)
 {
-    std::cout<<"Bureaucrat : incrementGrade called"<<std::endl;
+    std::cout<<"Bureaucrat : decrementGrade called"<<std::endl;
     if (this->grade  + 1 > 150)
         throw (Bureaucrat::GradeTooLowException());
     else

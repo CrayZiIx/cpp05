@@ -27,7 +27,7 @@ class Bureaucrat
         public:
                 const char *what() const throw();
     };
-    protected:
+    private:
         const std::string name;
         int grade;
     public:
