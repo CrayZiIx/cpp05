@@ -16,7 +16,7 @@ SRC_DIR       =
 OBJ_DIR       = obj/
 
 CXX           = c++
-CXXFLAGS      = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS      = -Wall -Wextra -Werror -std=c++98 -g
 
 SRC_FILES     = main\
 				Bureaucrat\

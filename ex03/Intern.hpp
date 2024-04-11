@@ -30,5 +30,7 @@ class Intern
         ~Intern();
         Intern &operator=(const Intern *other);
         AForm *makeForm(std::string typeForm, std::string targetForm);
-
+        AForm	*createSC(const std::string &target);
+        AForm	*createRR(const std::string &target);
+        AForm	*createPP(const std::string &target);
 };
