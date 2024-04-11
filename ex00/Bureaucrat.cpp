@@ -33,9 +33,21 @@ Bureaucrat::Bureaucrat(int _grade) : name("Unamed")
 {
     std::cout<<"Bureaucrat : Constructor - int _grade "<<std::endl;
     if (_grade > 150)
-        throw (Bureaucrat::GradeTooHighException());
-    else if (_grade < 1)
         throw (Bureaucrat::GradeTooLowException());
+    else if (_grade < 1)
+        throw (Bureaucrat::GradeTooHighException());
+    else
+        this->grade = _grade;
+    return ;
+}
+
+Bureaucrat::Bureaucrat(std::string name, int _grade) : name(name)
+{
+    std::cout<<"Bureaucrat : Constructor - std::string name | int _grade "<<std::endl;
+    if (_grade  + 1 > 150)
+        throw (Bureaucrat::GradeTooLowException());
+    else if (_grade - 1 < 1)
+        throw (Bureaucrat::GradeTooHighException());
     else
         this->grade = _grade;
     return ;
@@ -77,26 +89,27 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)
 std::ostream &operator<<(std::ostream &stream, const Bureaucrat &other)
 {
 	std::cout<<"Fixed : Left Shift - Bitwise Operator called"<<std::endl;
-    stream << other.getGrade();
+    stream << other.getName()<<", bureaucrat grade "<<other.getGrade()<<"."<<std::endl;
     return (stream);
 }
 
 void Bureaucrat::incrementGrade(void)
 {
-    std::cout<<"Bureaucrat : incrementGrade called"<<std::endl;
-    if (this->grade  + 1 > 150)
+    std::cout<<"Bureaucrat : decrementGrade called"<<std::endl;
+    if (this->grade - 1 < 1)
         throw (Bureaucrat::GradeTooHighException());
     else
-        this->grade += 1;
+        this->grade -= 1;
     return ;
 }
 
 void Bureaucrat::decrementGrade(void)
 {
-    std::cout<<"Bureaucrat : decrementGrade called"<<std::endl;
-    if (this->grade - 1 < 1)
+    std::cout<<"Bureaucrat : incrementGrade called"<<std::endl;
+    if (this->grade  + 1 > 150)
         throw (Bureaucrat::GradeTooLowException());
     else
-        this->grade -= 1;
+        this->grade += 1;
     return ;
 }
+

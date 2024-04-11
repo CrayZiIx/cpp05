@@ -33,6 +33,7 @@ class Bureaucrat
     public:
         Bureaucrat(void);
         Bureaucrat(int _grade);
+        Bureaucrat(std::string name, int _grade);
         Bureaucrat(const Bureaucrat &other);
         ~Bureaucrat(void);
         const std::string &getName(void) const;
