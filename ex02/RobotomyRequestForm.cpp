@@ -20,6 +20,7 @@ void RobotomyRequestForm::execute(const Bureaucrat &executor) const
         throw (AForm::FormNotSignedException());
     else if (executor.getGrade() > this->getGradeExec())
         throw(AForm::GradeTooLowException());
+    else 
     {
         srand(time(NULL));
         test = rand() % 2;

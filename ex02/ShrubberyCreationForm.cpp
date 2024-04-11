@@ -21,6 +21,7 @@ void ShrubberyCreationForm::execute(const Bureaucrat &executor) const
         throw (AForm::FormNotSignedException());
     else if (executor.getGrade() > this->getGradeExec())
         throw(AForm::GradeTooLowException());
+    else
     {
         outputfile.open((this->target + "_shrubbery").c_str(), std::ios::trunc);
         outputfile<<ASCII_TREES<<std::endl;
