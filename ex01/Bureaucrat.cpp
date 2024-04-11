@@ -41,6 +41,19 @@ Bureaucrat::Bureaucrat(int _grade) : name("Unamed")
     return ;
 }
 
+Bureaucrat::Bureaucrat(std::string name, int _grade) : name(name)
+{
+    std::cout<<"Bureaucrat : Constructor - std::string name | int _grade "<<std::endl;
+    if (_grade > 150)
+        throw (Bureaucrat::GradeTooLowException());
+    else if (_grade < 1)
+        throw (Bureaucrat::GradeTooHighException());
+    else
+        this->grade = _grade;
+    return ;
+}
+
+
 Bureaucrat::Bureaucrat(const Bureaucrat &other) : name("UnamedCpy")
 {
     std::cout<<"Bureaucrat : Constructor - const Bureau &other called"<<std::endl;
@@ -84,20 +97,20 @@ std::ostream &operator<<(std::ostream &stream, const Bureaucrat &other)
 void Bureaucrat::incrementGrade(void)
 {
     std::cout<<"Bureaucrat : incrementGrade called"<<std::endl;
-    if (this->grade  + 1 > 150)
+    if (this->grade - 1 < 1)
         throw (Bureaucrat::GradeTooHighException());
     else
-        this->grade += 1;
+        this->grade -= 1;
     return ;
 }
 
 void Bureaucrat::decrementGrade(void)
 {
     std::cout<<"Bureaucrat : decrementGrade called"<<std::endl;
-    if (this->grade - 1 < 1)
+    if (this->grade  + 1 > 150)
         throw (Bureaucrat::GradeTooLowException());
     else
-        this->grade -= 1;
+        this->grade += 1;
     return ;
 }
 

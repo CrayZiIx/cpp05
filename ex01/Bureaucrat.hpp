@@ -35,6 +35,7 @@ class Bureaucrat
         int grade;
     public:
         Bureaucrat(void);
+        Bureaucrat(std::string name, int _grade);
         Bureaucrat(int _grade);
         Bureaucrat(const Bureaucrat &other);
         ~Bureaucrat(void);

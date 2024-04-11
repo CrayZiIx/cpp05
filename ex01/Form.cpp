@@ -87,9 +87,9 @@ const char *Form::GradeTooLowException::what(void) const throw()
 
 std::ostream &operator<<(std::ostream &stream, const Form &other)
 {    
-    stream<<other.getName();
-    stream<<other.getSigned();
-    stream<<other.getGradeSigne();
-    stream<<other.getGradeExec();
+    stream<<"Name : "<<other.getName()<<std::endl;
+    stream<<"isSigned : "<<other.getSigned()<<std::endl;
+    stream<<"grade to signe : "<<other.getGradeSigne()<<std::endl;
+    stream<<"grade to exec : "<<other.getGradeExec()<<std::endl;
     return (stream);
 }
